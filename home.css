@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0; padding: 5rem;
+  background:rgba(0,0,0,0.7) url(https://assets.nicepagecdn.com/d2cc3eaa/3955079/images/34.jpg); 
+  background-blend-mode: darken;
+  /* 백그라운드 rgba와 url두 이미지를 어둡게 블랜드 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw; height: 100vh;
+  text-align:center;
+  transition: .3s;
+}
+
+
+body .text {
+  display: inline-block;
+  color: #fff;
+}
+
+.text {
+  width: 60%;
+}
+h1 {
+  font-size: 4rem;
+  animation-duration: 1s;
+  animation-name: psize,right,sca;
+  animation-timing-function:ease-in-out;
+}
+
+p:not(.box p) {
+  font-size: 21px;
+  margin-bottom: 40px;
+  width: 100%;
+  text-align: center;
+}
+.ptext {
+  animation-duration: 1s;
+  animation-name: psize,left,sca;
+  animation-timing-function:ease-in-out;  
+}
+button {
+  display: inline-block;
+  padding: 1rem;
+  width: 187px;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  margin: 0px , 40px;
+}
+button:hover {
+  background-color: orangered;
+  color: #fff;
+  border: orangered 2px solid;
+  cursor: pointer;
+}
+.btn {
+  margin: 30px;
+  animation-duration: 1s;
+  animation-name: psize;
+  animation-timing-function:ease-in-out;
+}
+.btn1 {
+  margin-right: 20px;
+  animation-name: leftt;
+  animation-duration: 1s;
+  animation-timing-function:ease-in-out;
+
+}
+.btn2 {
+  background: none;
+  color: #fff;
+  animation-name: rightt;
+  animation-duration: 1s;
+  animation-timing-function:ease-in-out;
+
+}
+
+.menu {
+  letter-spacing: 2px;
+  /* 자간띄우기 */
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+.box .pic .food .menu {
+  letter-spacing: 5px;
+}
+body .box {
+  color: #fff;
+  width: 100%;}
+
+.food {
+  display: inline-block;
+  width: 200px; height: 200px;
+  margin: 20px;
+  padding: 20px;
+  background-color: orangered;
+  position: relative;
+  animation-duration: 1s;
+  animation-name: psize,sca,rot;
+  animation-timing-function:ease-in-out;
+}
+
+img {
+  width: 60px; height: 60px;
+  position: absolute;
+  top: 40%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+.box .pic .food .menu {
+  line-height: 211px;
+}
+.box > p {
+  font-size: 21px;
+  opacity: 80%;}
+
+.box > p > a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.box > p > a:hover {
+  opacity: 70%;
+  border-bottom: 0.3px solid #fff;
+}
+.box {
+  animation-duration: 1s;
+  animation-name: psize,fadeInUp,sca;
+  animation-timing-function:ease-in-out;
+  
+}
+@keyframes sca {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+@keyframes psize {
+  from{
+    opacity: 0% ;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@keyframes right {
+  from { 
+    margin-left: -200%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes left {
+  from { 
+    margin-right: -200%;
+  }
+  to {
+    margin-right: 0%;
+  }
+}
+
+@keyframes up {
+  from {
+    margin-bottom: -200%;
+  }
+  to {
+    margin-bottom: 0%;
+  }
+}
+
+@keyframes rot {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      transform: translate3d(0, 200%, 0);
+  }
+  to {
+      transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes rightt {
+  from {
+    transform: translate3d(200%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes leftt {
+  from {
+    transform: translate3d(-200%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
